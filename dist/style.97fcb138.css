@@ -1,0 +1,121 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background: #f05a3e;
+}
+
+.filters,
+.sort {
+  display: flex;
+  flex-direction: column;
+  margin-right: 40px;
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+
+.filters input,
+.sort select {
+  margin-bottom: 15px;
+  margin-top: 5px;
+  height: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+}
+
+.parent-class {
+  display: flex;
+}
+
+#clients {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: white;
+}
+
+#clients.bodywrapcenter > tr > td {
+  width: 100%;
+  float: left;
+}
+
+#clients th {
+  text-align: left;
+}
+
+#clients thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+#clients th,
+#clients td {
+  padding: 12px 15px;
+}
+
+#clients tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+#clients tbody tr:hover {
+  background-color: #f3f3f3;
+}
+
+#clients tbody tr:last-of-type {
+  border-bottom: 0px solid #dddddd;
+}
+
+#clients tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+@media (max-width: 768px) {
+  .parent-class {
+    flex-direction: column;
+  }
+
+  #clients tbody tr {
+    display: flex;
+    flex-direction: column;
+  }
+
+  td:nth-of-type(1):before {
+    content: "ID";
+  }
+
+  td:nth-of-type(2):before {
+    content: "Name";
+  }
+
+  td:nth-of-type(3):before {
+    content: "Country";
+  }
+
+  td:nth-of-type(4):before {
+    content: "Industry";
+  }
+
+  td:nth-of-type(5):before {
+    content: "Number of Employees";
+  }
+
+  #clients td {
+    display: flex;
+  }
+
+  #clients th {
+    display: none;
+  }
+
+  #clients tbody tr td:before {
+    flex-basis: 11ch;
+    flex-shrink: 0;
+    font-weight: bold;
+  }
+}
+
+/*# sourceMappingURL=/style.97fcb138.css.map */

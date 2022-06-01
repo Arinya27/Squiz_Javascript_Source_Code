@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.scss" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" 
+              content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- Here a loader is created which 
+             loads till response comes -->
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" 
+                 role="status" id="loading">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <h1>Employee Details</h1>
+        <!-- table for showing data -->
+        <div class="parent-class">
+        <form class="form">
+            
+            <label>Filter By</label>
+            <div class="filters">
+            <label>Country:</label>
+            <input type="text" id="country" value="" onkeyup="filterValues()"/>
+            <label>Industry:</label>
+            <input type="text" id="industry" value="" onkeyup="filterValues()"/></div>
+            
+            <label>Sort By</label>
+            <div class="sort">
+            <label>Name:</label>
+            <select name="name" id="name" onChange="sortTable(1, this.value); ">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+              </select>
+            <label>Number of Employees:</label>
+            <select name="numberofEmployees" id="numberofEmployees" onChange="sortTable(4, this.value);">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+              </select>
+            </div>
+        </form>
+        <table id="clients"></table>
+    </div>
+    </body>
+</html>
